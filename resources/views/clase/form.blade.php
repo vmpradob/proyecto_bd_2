@@ -1,4 +1,10 @@
-<div class="form-group {{ $errors->has('precio_c') ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">
+    <label for="nombre" class="col-md-2 control-label">{{ 'Nombre' }}</label>
+    <div class="col-md-10">
+        <input class="form-control" name="nombre" type="text" id="nombre" value="{{ $clase->nombre or ''}}" required>
+        {!! $errors->first('nombre', '<p class="help-block">:message</p>') !!}
+    </div>
+</div><div class="form-group {{ $errors->has('precio_c') ? 'has-error' : ''}}">
     <label for="precio_c" class="col-md-2 control-label">{{ 'Precio C' }}</label>
     <div class="col-md-10">
         <input class="form-control" name="precio_c" type="number" id="precio_c" value="{{ $clase->precio_c or ''}}" required>
@@ -15,12 +21,6 @@
     <div class="col-md-10">
         <input class="form-control" name="probabilidad" type="number" id="probabilidad" value="{{ $clase->probabilidad or ''}}" required>
         {!! $errors->first('probabilidad', '<p class="help-block">:message</p>') !!}
-    </div>
-</div><div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">
-    <label for="nombre" class="col-md-2 control-label">{{ 'Nombre' }}</label>
-    <div class="col-md-10">
-        <input class="form-control" name="nombre" type="text" id="nombre" value="{{ $clase->nombre or ''}}" required>
-        {!! $errors->first('nombre', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('imgUrl') ? 'has-error' : ''}}">
     <label for="imgUrl" class="col-md-2 control-label">{{ 'Imgurl' }}</label>

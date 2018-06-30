@@ -18,13 +18,13 @@ class ClaseController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 5;
+        $perPage = 25;
 
         if (!empty($keyword)) {
-            $clase = Clase::where('precio_c', 'LIKE', "%$keyword%")
+            $clase = Clase::where('nombre', 'LIKE', "%$keyword%")
+                ->orWhere('precio_c', 'LIKE', "%$keyword%")
                 ->orWhere('precio_v', 'LIKE', "%$keyword%")
                 ->orWhere('probabilidad', 'LIKE', "%$keyword%")
-                ->orWhere('nombre', 'LIKE', "%$keyword%")
                 ->orWhere('imgUrl', 'LIKE', "%$keyword%")
                 ->paginate($perPage);
         } else {

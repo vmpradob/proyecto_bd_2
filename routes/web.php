@@ -18,22 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/admin/cards','HomeController@cards')->name('admin/cards');
-Route::resource('clase_carta', 'Clase_cartaController');
-
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
-Route::resource('clase', 'ClaseController');
 Route::resource('clase', 'ClaseController');

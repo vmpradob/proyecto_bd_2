@@ -123,7 +123,7 @@ return [
         ],
         [
             'text'        => 'Clases de cartas',
-            'url'         => 'clase_carta',
+            'url'         => 'clase',
             'icon'        => 'card',
             'label'       => null,
             'label_color' => 'success',

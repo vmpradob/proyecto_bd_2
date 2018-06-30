@@ -25,7 +25,26 @@ class Clase extends Model
      *
      * @var array
      */
-    protected $fillable = ['precio_c', 'precio_v', 'probabilidad', 'nombre', 'imgUrl'];
+    protected $fillable = ['nombre', 'precio_c', 'precio_v', 'probabilidad', 'imgUrl'];
 
+    public function cartas()
+    {
+        return $this->belongsToMany('App\Carta');
+    }
+    public function sobres()
+    {
+        return $this->hasMany('App\Sobre');
+    }
     
+
+    public function setUpdatedAt($value)
+    {
+        return NULL;
+    }
+
+
+    public function setCreatedAt($value)
+    {
+        return NULL;
+    }
 }

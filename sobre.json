@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "precio",
+      "type": "integer"
+    },
+    {
+      "name": "cant_cartas",
+      "type": "integer"
+    },
+    {
+      "name": "imgUrl",
+      "type": "file"
+    }
+  ],
+  "foreign_keys": [
+  ],
+  "relationships": [
+    {
+      "name": "clases",
+      "type": "belongsTo",
+      "class": "App\\Clase"
+    },
+    {
+      "name": "compras",
+      "type": "hasMany",
+      "class": "App\\Compra"
+    }
+  ],
+  "validations": [
+    {
+      "field": "nombre",
+      "rules": "required|max:20"
+    },
+    {
+      "field": "precio",
+      "rules": "required|numeric"
+    },
+    {
+      "field": "cant_carta",
+      "rules": "required|numeric"
+    }
+  ]
+}

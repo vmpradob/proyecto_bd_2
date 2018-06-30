@@ -15,17 +15,18 @@
     {
       "name": "clases",
       "type": "belongsToMany",
-      "class": "App\\Clase_Cartum"
+      "class": "App\\Clase"
     },
+    {
+      "name": "sobres",
+      "type": "belongsToMany",
+      "class": "App\\Jugador"
+    },
+
     {
       "name": "detalles_intercambio",
       "type": "hasMany",
       "class": "App\\Detalles_intercambio"
-    },
-    {
-      "name": "jugadores",
-      "type": "belogsToMany",
-      "class": "App\\Jugador"
     }
   ],
   "validations": [

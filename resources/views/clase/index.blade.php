@@ -35,14 +35,14 @@
                             <table class="table table-hover" style="margin-bottom: 0px">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Precio C</th><th>Precio V</th><th>Probabilidad</th><th>Nombre</th><th>ImgUrl</th><th>Actions</th>
+                                        <th>#</th><th>Nombre</th><th>Precio C</th><th>Precio V</th><th>Probabilidad</th><th>ImgUrl</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($clase as $item)
                                     <tr>
                                         <td>{{ $loop->iteration or $item->id }}</td>
-                                        <td>{{ $item->precio_c }}</td><td>{{ $item->precio_v }}</td><td>{{ $item->probabilidad }}</td><td>{{ $item->nombre }}</td><td>{{ $item->imgUrl }}</td>
+                                        <td>{{ $item->nombre }}</td><td>{{ $item->precio_c }}</td><td>{{ $item->precio_v }}</td><td>{{ $item->probabilidad }}</td><td>{{ $item->imgUrl }}</td>
                                         <td>
                                             <a href="{{ url('/clase/' . $item->id) }}" title="View Clase"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/clase/' . $item->id . '/edit') }}" title="Edit Clase"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
