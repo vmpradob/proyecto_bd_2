@@ -5,18 +5,6 @@
       "type": "string"
     },
     {
-      "name": "precio_c",
-      "type": "integer"
-    },
-    {
-      "name": "precio_v",
-      "type": "integer"
-    },
-    {
-      "name": "probabilidad",
-      "type": "float"
-    },
-    {
       "name": "imgUrl",
       "type": "file"
     }
@@ -25,27 +13,25 @@
   ],
   "relationships": [
     {
-      "name": "user",
-      "type": "belongsTo",
-      "class": "App\\User"
+      "name": "clases",
+      "type": "belongsToMany",
+      "class": "App\\Clase_Cartum"
+    },
+    {
+      "name": "detalles_intercambio",
+      "type": "hasMany",
+      "class": "App\\Detalles_intercambio"
+    },
+    {
+      "name": "jugadores",
+      "type": "belogsToMany",
+      "class": "App\\Jugador"
     }
   ],
   "validations": [
     {
       "field": "nombre",
       "rules": "required|max:20"
-    },
-    {
-      "field": "precio_c",
-      "rules": "required"
-    },
-    {
-      "field": "precio_v",
-      "rules": "required"
-    },
-    {
-      "field": "probabilidad",
-      "rules": "required|numeric"
     }
   ]
 }
