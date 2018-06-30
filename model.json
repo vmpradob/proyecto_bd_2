@@ -1,0 +1,51 @@
+{
+  "fields": [
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "precio_c",
+      "type": "integer"
+    },
+    {
+      "name": "precio_v",
+      "type": "integer"
+    },
+    {
+      "name": "probabilidad",
+      "type": "float"
+    },
+    {
+      "name": "imgUrl",
+      "type": "file"
+    }
+  ],
+  "foreign_keys": [
+  ],
+  "relationships": [
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\User"
+    }
+  ],
+  "validations": [
+    {
+      "field": "nombre",
+      "rules": "required|max:20"
+    },
+    {
+      "field": "precio_c",
+      "rules": "required"
+    },
+    {
+      "field": "precio_v",
+      "rules": "required"
+    },
+    {
+      "field": "probabilidad",
+      "rules": "required|numeric"
+    }
+  ]
+}
