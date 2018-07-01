@@ -31,7 +31,11 @@
                                     <tr>
                                         <th>ID</th><td>{{ $cartum->id }}</td>
                                     </tr>
-                                    <tr><th> Nombre </th><td> {{ $cartum->nombre }} </td></tr><tr><th> ImgUrl </th><td> {{ $cartum->imgUrl }} </td></tr>
+                                    <tr><th> Nombre </th><td> {{ $cartum->nombre }} </td></tr><tr><th> ImgUrl </th><td> 
+                                        <!--{{ $cartum->imgUrl }}-->
+                                        <img source>
+                                        
+                                    </td></tr>
                                 </tbody>
                             </table>
                         </div>
