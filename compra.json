@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "name": "id_jugador",
+      "type": "integer"
+    },
+    {
+      "name": "id_sobre",
+      "type": "integer"
+    },
+    {
+      "name" : "cantidad",
+      "type" : "integer"
+    }
+  ],
+  "foreign_keys": [
+  ],
+  "relationships": [
+    {
+      "name": "jugador",
+      "type": "belongsTo",
+      "class": "App\\Jugador"
+    },
+    {
+      "name": "sobre",
+      "type": "belongsTo",
+      "class": "App\\Sobre"
+    }
+  ],
+  "validations": [
+    {
+      "field": "nombre",
+      "rules": "required|max:20"
+    },
+    {
+      "field": "precio",
+      "rules": "required|numeric"
+    },
+    {
+      "field": "cant_carta",
+      "rules": "required|numeric"
+    }
+  ]
+}

@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>League</b>OfCards',
+    'logo' => '<b>LeagueOfCards</b>',
 
     'logo_mini' => '<b>LoC</b>',
 
@@ -108,23 +108,25 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
-        [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+        'MANEJO DE CARTAS',
         [
             'text'        => 'Cartas',
-            'url'         => 'admin/cards',
-            'icon'        => 'card',
+            'url'         => 'admin/carta',
+            'icon'        => 'address-book',
             'label'       => null,
             'label_color' => 'success',
         ],
         [
             'text'        => 'Clases de cartas',
-            'url'         => 'clase_carta',
-            'icon'        => 'card',
+            'url'         => 'clase',
+            'icon'        => 'address-book',
+            'label'       => null,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Sobres',
+            'url'         => 'sobre',
+            'icon'        => 'address-book',
             'label'       => null,
             'label_color' => 'success',
         ],

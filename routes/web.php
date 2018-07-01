@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('clase', 'ClaseController');
 Route::resource('carta', 'CartaController');
 Route::resource('jugador', 'JugadorController');
+Route::resource('sobre', 'SobreController');
+Route::resource('compra', 'CompraController');
