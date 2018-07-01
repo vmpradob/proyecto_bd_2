@@ -1,0 +1,49 @@
+{
+  "fields": [
+    {
+      "name": "id_usuario",
+      "type": "string"
+    },
+    {
+      "name": "dinero",
+      "type": "integer"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "id_usuario",
+      "references": "id",
+      "on": "users",
+      "onDelete": "cascade"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "usuario",
+      "type": "hasOne",
+      "class": "App\\Users"
+    },
+    {
+      "name": "cartas",
+      "type": "belongsToMany",
+      "class": "App\\Cartas"
+    },
+    {
+      "name": "compras",
+      "type": "hasMany",
+      "class": "App\\Compra"
+    },
+    {
+      "name": "detalles_intercambio",
+      "type": "hasMany",
+      "class": "App\\Detalles_intercambio"
+    }
+  ],
+  "validations":
+  [
+    {
+      "field": "dinero",
+      "rules": "required|numeric"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 <?php
 
-return [
+$result = [
 
     /*
     |--------------------------------------------------------------------------
@@ -107,6 +107,7 @@ return [
     |
     */
 
+
     'menu' => [
         'MAIN NAVIGATION',
         [
@@ -116,7 +117,7 @@ return [
         ],
         [
             'text'        => 'Cartas',
-            'url'         => 'admin/cards',
+            'url'         => 'admin/carta',
             'icon'        => 'card',
             'label'       => null,
             'label_color' => 'success',
@@ -229,3 +230,4 @@ return [
         'chartjs'    => true,
     ],
 ];
+return $result;
