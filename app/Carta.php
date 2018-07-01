@@ -19,7 +19,6 @@ class Carta extends Model
     * @var string
     */
     protected $primaryKey = 'id';
-
     /**
      * Attributes that should be mass-assignable.
      *
@@ -29,11 +28,11 @@ class Carta extends Model
 
     public function clases()
     {
-        return $this->belongsToMany('App\Clase');
+        return $this->belongsToMany('App\Clase','clase_carta_carta','id_carta','id_clase');
     }
     public function jugadores()
     {
-        return $this->belongsToMany('App\Jugador');
+        return $this->belongsToMany('App\Jugador','jugador_posee_carta','id_carta','id_jugador');
     }
     public function detalles_intercambio()
     {

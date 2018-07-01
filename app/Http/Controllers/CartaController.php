@@ -57,7 +57,8 @@ class CartaController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+
+            $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
                 $extension = $file->getClientOriginalExtension();
@@ -65,11 +66,11 @@ class CartaController extends Controller
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
         }
 
-        Carta::create($requestData);
-
+        $carta = Carta::create($requestData);
+        /** @var Carta $carta */
+        if($request->get('clases'))  $carta->clases()->attach($request->get('clases'));
         return redirect('carta')->with('flash_message', 'Carta added!');
     }
 
@@ -118,15 +119,13 @@ class CartaController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+                $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
-
                 $extension = $file->getClientOriginalExtension();
                 $fileName = rand(11111, 99999) . '.' . $extension;
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
         }
 
         $cartum = Carta::findOrFail($id);

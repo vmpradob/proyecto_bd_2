@@ -61,7 +61,8 @@ class SobreController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+
+            $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
                 $extension = $file->getClientOriginalExtension();
@@ -69,7 +70,6 @@ class SobreController extends Controller
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
         }
 
         Sobre::create($requestData);
@@ -124,7 +124,8 @@ class SobreController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+
+            $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
                 $extension = $file->getClientOriginalExtension();
@@ -132,7 +133,6 @@ class SobreController extends Controller
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
         }
 
         $sobre = Sobre::findOrFail($id);

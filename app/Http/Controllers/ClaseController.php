@@ -63,7 +63,8 @@ class ClaseController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+
+                $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
                 $extension = $file->getClientOriginalExtension();
@@ -71,7 +72,7 @@ class ClaseController extends Controller
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
+
         }
 
         Clase::create($requestData);
@@ -127,7 +128,8 @@ class ClaseController extends Controller
         
 
         if ($request->hasFile('imgUrl')) {
-            foreach($request['imgUrl'] as $file){
+
+                $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
                 $extension = $file->getClientOriginalExtension();
@@ -135,7 +137,6 @@ class ClaseController extends Controller
 
                 $file->move($uploadPath, $fileName);
                 $requestData['imgUrl'] = $fileName;
-            }
         }
 
         $clase = Clase::findOrFail($id);

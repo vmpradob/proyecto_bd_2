@@ -29,7 +29,7 @@ class Clase extends Model
 
     public function cartas()
     {
-        return $this->belongsToMany('App\Carta');
+        return $this->belongsToMany('App\Carta','clase_carta_carta','id_clase','id_carta');
     }
     public function sobres()
     {

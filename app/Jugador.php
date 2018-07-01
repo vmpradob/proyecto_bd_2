@@ -33,11 +33,11 @@ class Jugador extends Model
     }
     public function cartas()
     {
-        return $this->belongsToMany('App\Cartas');
+        return $this->belongsToMany('App\Cartas','jugador_posee_carta','id_jugador','id_carta');
     }
     public function compras()
     {
-        return $this->hasMany('App\Compra');
+        return $this->hasMany('App\Compra','id_jugador','id');
     }
     public function detalles_intercambio()
     {

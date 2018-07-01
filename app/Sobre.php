@@ -37,7 +37,7 @@ class Sobre extends Model
     }
     public function compras()
     {
-        return $this->hasMany('App\Compra');
+        return $this->hasMany('App\Compra','id_sobre','id');
     }
     
 

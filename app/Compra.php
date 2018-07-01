@@ -11,7 +11,7 @@ class Compra extends Model
      *
      * @var string
      */
-    protected $table = 'compras';
+    protected $table = 'jugador_compra_sobre';
 
     /**
     * The database primary key value.
@@ -29,11 +29,11 @@ class Compra extends Model
 
     public function jugador()
     {
-        return $this->belongsTo('App\Jugador');
+        return $this->belongsTo('App\Jugador','id_jugador','id');
     }
     public function sobre()
     {
-        return $this->belongsTo('App\Sobre');
+        return $this->belongsTo('App\Sobre','id_sobre','id');
     }
     
 
