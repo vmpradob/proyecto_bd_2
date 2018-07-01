@@ -32,8 +32,11 @@
                                         <th>ID</th><td>{{ $cartum->id }}</td>
                                     </tr>
                                     <tr><th> Nombre </th><td> {{ $cartum->nombre }} </td></tr><tr><th> ImgUrl </th><td> 
-                                        <!--{{ $cartum->imgUrl }}-->
-                                        <img source>
+                                        
+                                        <img src="../uploads/imgUrl/{{$cartum->imgUrl}}" style="position: absolute; margin-top:20px; margin-left: 35px">
+                                        <img src="../uploads/imgUrl/Retador.png" style="position: absolute; ">
+                                        <img src="../uploads/imgUrl/shurima.png" style="position: absolute; ">
+                                        <img src="../uploads/imgUrl/Tanque.png" style="position: absolute; ">
                                         
                                     </td></tr>
                                 </tbody>

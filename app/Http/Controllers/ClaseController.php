@@ -56,8 +56,7 @@ class ClaseController extends Controller
         $this->validate($request, [
 			'nombre' => 'required|max:20',
 			'precio_c' => 'required',
-			'precio_v' => 'required',
-			'probabilidad' => 'required|numeric'
+			'probabilidad' => 'required'
 		]);
         $requestData = $request->all();
         
