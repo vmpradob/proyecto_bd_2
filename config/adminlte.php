@@ -111,7 +111,7 @@ return [
         'MANEJO DE CARTAS',
         [
             'text'        => 'Cartas',
-            'url'         => 'admin/carta',
+            'url'         => 'carta',
             'icon'        => 'address-book',
             'label'       => null,
             'label_color' => 'success',
