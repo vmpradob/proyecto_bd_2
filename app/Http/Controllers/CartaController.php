@@ -70,7 +70,7 @@ class CartaController extends Controller
 
         $carta = Carta::create($requestData);
         /** @var Carta $carta */
-        if($request->get('clases'))  $carta->clases()->attach($request->get('clases'));
+        $carta->clases()->sync($request->get('clases'));
         return redirect('carta')->with('flash_message', 'Carta added!');
     }
 
@@ -128,7 +128,9 @@ class CartaController extends Controller
                 $requestData['imgUrl'] = $fileName;
         }
 
+        /** @var Carta $cartum */
         $cartum = Carta::findOrFail($id);
+        $cartum->clases()->sync($request->get('clases'));
         $cartum->update($requestData);
 
         return redirect('carta')->with('flash_message', 'Carta updated!');

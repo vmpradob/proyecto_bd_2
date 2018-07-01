@@ -25,9 +25,7 @@
                             {{ csrf_field() }}
 
                             @include ('carta.form', ['submitButtonText' => 'Update'])
-
                         </form>
-
                     </div>
                 </div>
             </div>
