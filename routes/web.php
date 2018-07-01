@@ -23,3 +23,4 @@ Route::resource('carta', 'CartaController');
 Route::resource('jugador', 'JugadorController');
 Route::resource('sobre', 'SobreController');
 Route::resource('compra', 'CompraController');
+Route::resource('intercambio', 'IntercambioController');

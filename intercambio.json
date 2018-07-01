@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "name": "fecha",
+      "type": "date"
+    },
+    {
+      "name": "id_jugador1",
+      "type": "integer"
+    },
+    {
+      "name": "id_jugador2",
+      "type": "integer"
+    }
+  ],
+  "foreign_keys": [
+  ],
+  "relationships": [
+    {
+      "name": "jugador",
+      "type": "hasOne",
+      "class": "App\\Jugador"
+    },
+    {
+      "name": "detalles_intercambio",
+      "type": "hasMany",
+      "class": "App\\Detalles_intercambio"
+    }
+  ],
+  "validations": [
+    {
+      "field": "id_jugador1",
+      "rules": "required|numeric"
+    },
+    {
+      "field": "id_jugador2",
+      "rules": "required|numeric"
+    }
+  ]
+}

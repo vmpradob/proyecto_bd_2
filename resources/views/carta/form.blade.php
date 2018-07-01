@@ -11,6 +11,16 @@
         {!! $errors->first('imgUrl', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
+<div class="form-group {{ $errors->has('imgUrl') ? 'has-error' : ''}}">
+    <div class="col-md-offset-2 col-md-10">
+        <select name="clase" id="selectMultiple" multiple class="form-control">
+            @foreach(App\Clase::all() as $clase)
+                <option value="{{$clase->id}}">{{$clase->nombre}}</option>
+            @endforeach
+        </select>
+        {!! $errors->first('imgUrl', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
 
 <div class="form-group">
     <div class="col-md-offset-2 col-md-10">
