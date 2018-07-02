@@ -14,7 +14,7 @@
         @endphp
          @foreach($cartas as  $carta)
             <div class="col-md-2">
-            <a href="">
+            <a href="#" onclick="comprar({{$carta->precio_c()}},{{$carta->id}})">
             <img src="../uploads/imgUrl/{{$carta->imgUrl}}" height="250" style="position: absolute; margin-top:{{($count2*320)+6}}px; margin-left: 15px">
                 @foreach($carta->clases()->orderBy('precio_c','desc')->get() as $clase)
                     <img src="../uploads/imgUrl/{{$clase->imgUrl}}" height="300" style="position: absolute; margin-top:{{($count2*320)}}px">
