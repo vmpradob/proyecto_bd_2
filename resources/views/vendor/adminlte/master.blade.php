@@ -66,7 +66,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
 function comprar(precio,id){
-    console.log('hola')
+    console.log('hola');
     swal("Seguro desea comprar este articulo? tiene un precio de "+precio, {
         buttons: {
             cancel: "cancelar compra",
@@ -78,7 +78,16 @@ function comprar(precio,id){
         })
         .then((value) => {
         $.get("../carta/"+id+'/comprar', function(data, status){
-            location.reload();
+            if(data == 'false'){
+                swal({
+                    title: "Error!",
+                    text: "fondos insuficientes!",
+                    icon: "warning",
+                    button: "Ok",
+                });
+            }else{
+                location.reload()
+            }
         });
     });
 }
