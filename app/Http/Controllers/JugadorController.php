@@ -140,5 +140,6 @@ class JugadorController extends Controller
             $jugador->save();
             return 'true';
         }
+        return 'false';
     }
 }
