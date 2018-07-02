@@ -19,6 +19,7 @@
                 @foreach($carta->clases()->orderBy('precio_c','desc')->get() as $clase)
                     <img src="../uploads/imgUrl/{{$clase->imgUrl}}" height="300" style="position: absolute; margin-top:{{($count2*320)}}px">
                 @endforeach
+                <p style="position: absolute;color: white;font-size: 11px;margin-top: {{($count2*320)+219}}px;left:30%;">Precio: {{$carta->precio_c()}}</p>
                 <p style="position: absolute;color: white;font-size: 10px;margin-top: {{($count2*320)+237}}px;left:15%;">{{$carta->nombre}}</p>
             </a>       
 
