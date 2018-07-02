@@ -136,10 +136,27 @@ class JugadorController extends Controller
         $jugador = Jugador::where('id_usuario', Auth::user()->id)->first();
         if($jugador->dinero >= $carta->precio_c()){
             $jugador->dinero = $jugador->dinero - $carta->precio_c();
-            $jugador->cartas()->attach($carta->id);
+            if($jugador->cartas()->find($carta->id)){
+                $jugador->cartas()->updateExistingPivot($carta->id, ['cantidad'=>  ++$jugador->cartas()->find($carta->id)->pivot->cantidad]);
+            }else{
+                $jugador->cartas()->attach($carta->id);
+            }
             $jugador->save();
             return 'true';
         }
         return 'false';
+    }
+    public function vender($carta)
+    {
+        $carta =Carta::where('id',$carta)->first();
+        $jugador = Jugador::where('id_usuario', Auth::user()->id)->first();
+        $jugador->dinero = $jugador->dinero + $carta->precio_v();
+        if($jugador->cartas()->find($carta->id)->pivot->cantidad > 1){
+            $jugador->cartas()->updateExistingPivot($carta->id, ['cantidad'=>  --$jugador->cartas()->find($carta->id)->pivot->cantidad]);
+        }else{
+            $jugador->cartas()->detach($carta->id);
+        }
+        $jugador->save();
+        return 'true';
     }
 }

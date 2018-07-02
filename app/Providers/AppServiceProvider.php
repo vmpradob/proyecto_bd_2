@@ -42,6 +42,10 @@ class AppServiceProvider extends ServiceProvider
                     'text' => 'Adquirir monedas',
                     'url' => 'tienda/dinero',
                 ]);
+                $event->menu->add([
+                   'text' => 'Ventas de usuario',
+                   'url' => 'tienda/usuarios'
+                ]);
             }
 
         });

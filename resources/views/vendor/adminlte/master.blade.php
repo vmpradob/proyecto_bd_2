@@ -66,7 +66,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
 function comprar(precio,id){
-    console.log('hola');
     swal("Seguro desea comprar este articulo? tiene un precio de "+precio, {
         buttons: {
             cancel: "cancelar compra",
@@ -90,6 +89,32 @@ function comprar(precio,id){
             }
         });
     });
+}
+
+function vender(precio,id){
+    swal("Seguro desea vender este articulo? tiene un precio de "+precio, {
+        buttons: {
+            cancel: "cancelar vender",
+            catch: {
+                text: "vender",
+                value: "catch",
+            }
+        },
+    })
+        .then((value) => {
+        $.get("../../carta/"+id+'/vender', function(data, status){
+        if(data == 'false'){
+            swal({
+                title: "Error!",
+                text: "Ha ocurrido en la venta!",
+                icon: "warning",
+                button: "Ok",
+            });
+        }else{
+            location.reload()
+        }
+    });
+});
 }
 
 </script>

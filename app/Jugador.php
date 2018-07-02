@@ -34,7 +34,7 @@ class Jugador extends Model
     }
     public function cartas()
     {
-        return $this->belongsToMany('App\Carta','jugador_posee_carta','id_jugador','id_carta');
+        return $this->belongsToMany('App\Carta','jugador_posee_carta','id_jugador','id_carta')->withPivot('cantidad');
     }
     public function compras()
     {
