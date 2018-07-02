@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f4a951-4923-4d60-88e6-64c57b3b3e36" name="Default" comment="estableciendo relaciones para gestion de cartas">
+    <list default="true" id="74f4a951-4923-4d60-88e6-64c57b3b3e36" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntercambioController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Intercambio.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/intercambio/create.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/intercambio/edit.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/intercambio/form.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/intercambio/index.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/intercambio/show.blade.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartaController.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/carta/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/carta/show.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clase/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/clase/index.blade.php" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" afterPath="$PROJECT_DIR$/config/adminlte.php" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/carta/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -125,6 +131,72 @@
                 <marker date="1530494330096" expanded="true" signature="641:655" ph="..." />
                 <marker date="1530494330096" expanded="true" signature="822:837" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminlte.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/adminlte.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+              <folding>
+                <element signature="e#21#430#0#PHP" expanded="false" />
+                <element signature="e#526#932#0#PHP" expanded="false" />
+                <element signature="e#1890#2305#0#PHP" expanded="false" />
+                <element signature="e#2345#2821#0#PHP" expanded="false" />
+                <element signature="e#4356#4478#1#PHP" expanded="false" />
+                <element signature="e#4488#5759#1#PHP" expanded="false" />
+                <element signature="e#4588#5748#1#PHP" expanded="false" />
+                <element signature="e#4606#4703#1#PHP" expanded="false" />
+                <element signature="e#4721#5618#1#PHP" expanded="false" />
+                <element signature="e#4840#5599#1#PHP" expanded="false" />
+                <element signature="e#4866#4987#1#PHP" expanded="false" />
+                <element signature="e#5013#5576#1#PHP" expanded="false" />
+                <element signature="e#5156#5549#1#PHP" expanded="false" />
+                <element signature="e#5190#5337#1#PHP" expanded="false" />
+                <element signature="e#5371#5518#1#PHP" expanded="false" />
+                <element signature="e#5636#5733#1#PHP" expanded="false" />
+                <element signature="e#5787#5874#1#PHP" expanded="false" />
+                <element signature="e#5884#5972#1#PHP" expanded="false" />
+                <element signature="e#5982#6072#1#PHP" expanded="false" />
+                <element signature="e#6086#6542#0#PHP" expanded="false" />
+                <element signature="e#6923#7343#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/intercambio/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="19" column="147" lean-forward="false" selection-start-line="19" selection-start-column="147" selection-end-line="19" selection-end-column="147" />
+              <folding>
+                <marker date="1530494965309" expanded="true" signature="9:25" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="37:53" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="96:105" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="630:735" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="943:962" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="1401:1416" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="1929:1950" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2039:2070" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2124:2138" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2151:2209" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2222:2223" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2222:2280" ph="..." />
+                <marker date="1530494965309" expanded="true" signature="2551:2622" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,7 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/crud-generator/views/html/form-fields/wrap-field.blade.stub" />
         <option value="$PROJECT_DIR$/resources/views/clase_carta/clase_carta/form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Clase_cartaController.php" />
         <option value="$PROJECT_DIR$/config/crudgenerator.php" />
@@ -187,12 +258,10 @@
         <option value="$PROJECT_DIR$/app/Carta.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SobreController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/intercambio.json" />
         <option value="$PROJECT_DIR$/app/Intercambio.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/config/adminlte.php" />
         <option value="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/carta/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/carta/form.blade.php" />
@@ -202,6 +271,9 @@
         <option value="$PROJECT_DIR$/resources/views/clase/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CartaController.php" />
         <option value="$PROJECT_DIR$/resources/views/carta/show.blade.php" />
+        <option value="$PROJECT_DIR$/config/adminlte.php" />
+        <option value="$PROJECT_DIR$/resources/views/intercambio/index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -320,6 +392,35 @@
             <path>
               <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="proyecto_bd_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto_bd_2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -485,7 +586,7 @@
       <option name="presentableId" value="Default" />
       <updated>1530298109808</updated>
       <workItem from="1530298111964" duration="4563000" />
-      <workItem from="1530361675993" duration="64414000" />
+      <workItem from="1530361675993" duration="64718000" />
     </task>
     <task id="LOCAL-00001" summary="bases de datos y model.json">
       <created>1530388449574</created>
@@ -585,15 +686,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530493271870</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="estableciendo relaciones para gestion de cartas">
+      <created>1530494757463</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1530494757463</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68977000" />
+    <option name="totallyTimeSpent" value="69281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -602,7 +709,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -694,9 +801,9 @@
     <MESSAGE value="asignar clases a una carta" />
     <MESSAGE value="arreglos y correciones en clase, carta y sobre" />
     <MESSAGE value="correciones en los form" />
-    <MESSAGE value="estableciendo relaciones para gestion de cartas" />
     <MESSAGE value="fix sobre form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sobre form" />
+    <MESSAGE value="estableciendo relaciones para gestion de cartas" />
+    <option name="LAST_COMMIT_MESSAGE" value="estableciendo relaciones para gestion de cartas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,14 +818,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/carta/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Clase_carta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1075,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1112,37 +1203,6 @@
         <state relative-caret-position="708">
           <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/adminlte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="54" column="73" lean-forward="true" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
-          <folding>
-            <element signature="e#21#430#0#PHP" expanded="false" />
-            <element signature="e#526#932#0#PHP" expanded="false" />
-            <element signature="e#1890#2305#0#PHP" expanded="false" />
-            <element signature="e#2345#2821#0#PHP" expanded="false" />
-            <element signature="e#4237#4351#1#PHP" expanded="false" />
-            <element signature="e#4361#4483#1#PHP" expanded="false" />
-            <element signature="e#4493#5764#1#PHP" expanded="false" />
-            <element signature="e#4593#5753#1#PHP" expanded="false" />
-            <element signature="e#4611#4708#1#PHP" expanded="false" />
-            <element signature="e#4726#5623#1#PHP" expanded="false" />
-            <element signature="e#4845#5604#1#PHP" expanded="false" />
-            <element signature="e#4871#4992#1#PHP" expanded="false" />
-            <element signature="e#5018#5581#1#PHP" expanded="false" />
-            <element signature="e#5161#5554#1#PHP" expanded="false" />
-            <element signature="e#5195#5342#1#PHP" expanded="false" />
-            <element signature="e#5376#5523#1#PHP" expanded="false" />
-            <element signature="e#5641#5738#1#PHP" expanded="false" />
-            <element signature="e#5792#5879#1#PHP" expanded="false" />
-            <element signature="e#5889#5977#1#PHP" expanded="false" />
-            <element signature="e#5987#6077#1#PHP" expanded="false" />
-            <element signature="e#6091#6547#0#PHP" expanded="false" />
-            <element signature="e#6928#7348#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1388,6 +1448,66 @@
             <marker date="1530494330096" expanded="true" signature="641:655" ph="..." />
             <marker date="1530494330096" expanded="true" signature="822:837" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/adminlte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+          <folding>
+            <element signature="e#21#430#0#PHP" expanded="false" />
+            <element signature="e#526#932#0#PHP" expanded="false" />
+            <element signature="e#1890#2305#0#PHP" expanded="false" />
+            <element signature="e#2345#2821#0#PHP" expanded="false" />
+            <element signature="e#4356#4478#1#PHP" expanded="false" />
+            <element signature="e#4488#5759#1#PHP" expanded="false" />
+            <element signature="e#4588#5748#1#PHP" expanded="false" />
+            <element signature="e#4606#4703#1#PHP" expanded="false" />
+            <element signature="e#4721#5618#1#PHP" expanded="false" />
+            <element signature="e#4840#5599#1#PHP" expanded="false" />
+            <element signature="e#4866#4987#1#PHP" expanded="false" />
+            <element signature="e#5013#5576#1#PHP" expanded="false" />
+            <element signature="e#5156#5549#1#PHP" expanded="false" />
+            <element signature="e#5190#5337#1#PHP" expanded="false" />
+            <element signature="e#5371#5518#1#PHP" expanded="false" />
+            <element signature="e#5636#5733#1#PHP" expanded="false" />
+            <element signature="e#5787#5874#1#PHP" expanded="false" />
+            <element signature="e#5884#5972#1#PHP" expanded="false" />
+            <element signature="e#5982#6072#1#PHP" expanded="false" />
+            <element signature="e#6086#6542#0#PHP" expanded="false" />
+            <element signature="e#6923#7343#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/intercambio/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="19" column="147" lean-forward="false" selection-start-line="19" selection-start-column="147" selection-end-line="19" selection-end-column="147" />
+          <folding>
+            <marker date="1530494965309" expanded="true" signature="9:25" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="37:53" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="96:105" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="630:735" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="943:962" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="1401:1416" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="1929:1950" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2039:2070" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2124:2138" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2151:2209" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2222:2223" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2222:2280" ph="..." />
+            <marker date="1530494965309" expanded="true" signature="2551:2622" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

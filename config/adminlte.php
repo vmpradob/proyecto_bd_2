@@ -130,10 +130,10 @@ return [
             'label'       => null,
             'label_color' => 'success',
         ],
-        'ACCOUNT SETTINGS',
+        'REGISTROS',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'text' => 'Intercambios',
+            'url'  => 'intercambio',
             'icon' => 'user',
         ],
         [
