@@ -25,3 +25,4 @@ Route::resource('sobre', 'SobreController');
 Route::resource('compra', 'CompraController');
 Route::get('intercambio', 'IntercambioController@index');
 Route::get('tienda/carta','TiendaController@cartas');
+Route::get('user/{jugador}/coleccion','JugadorController@cartas');

@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Jugador;
+use App\User;
 use Illuminate\Http\Request;
 
 class JugadorController extends Controller
@@ -121,5 +122,10 @@ class JugadorController extends Controller
         Jugador::destroy($id);
 
         return redirect('jugador')->with('flash_message', 'Jugador deleted!');
+    }
+
+    public function cartas(Jugador $jugador){
+        $cartas = $jugador->cartas()->paginate(12);
+        return view('user.cartas', compact('cartas'));
     }
 }
