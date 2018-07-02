@@ -50,4 +50,12 @@ class Carta extends Model
     {
         return NULL;
     }
+
+    public function precio_c(){
+        return $this->clases()->where('precio_c','>',0)->first()->precio_c;
+    }
+
+    public function precio_v(){
+        return $this->clases()->where('precio_c','>',0)->first()->precio_v;
+    }
 }
