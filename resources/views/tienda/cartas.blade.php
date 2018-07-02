@@ -14,11 +14,11 @@
          @foreach($cartas as  $carta)
             <div class="col-md-2">
             <a href="">
-            <img src="../uploads/imgUrl/{{$carta->imgUrl}}" height="250" style="position: absolute; margin-top:{{($count2*610)+6}}px; margin-left: 15px">
+            <img src="../uploads/imgUrl/{{$carta->imgUrl}}" height="250" style="position: absolute; margin-top:{{($count2*320)+6}}px; margin-left: 15px">
                 @foreach($carta->clases()->orderBy('precio_c','desc')->get() as $clase)
-                    <img src="../uploads/imgUrl/{{$clase->imgUrl}}" height="300" style="position: absolute; margin-top:{{($count2*610)}}px">
+                    <img src="../uploads/imgUrl/{{$clase->imgUrl}}" height="300" style="position: absolute; margin-top:{{($count2*320)}}px">
                 @endforeach
-                <p style="position: absolute;color: white;font-size: 10px;margin-top: {{($count2*610)+237}}px;left:15%;">{{$carta->nombre}}</p>
+                <p style="position: absolute;color: white;font-size: 10px;margin-top: {{($count2*320)+237}}px;left:15%;">{{$carta->nombre}}</p>
             </a>       
 
             </div>
