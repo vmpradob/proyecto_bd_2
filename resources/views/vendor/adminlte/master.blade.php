@@ -63,6 +63,27 @@
 @endif
 
 @yield('adminlte_js')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+function comprar(precio,id){
+    console.log('hola')
+    swal("Seguro desea comprar este articulo? tiene un precio de "+precio, {
+        buttons: {
+            cancel: "cancelar compra",
+            catch: {
+            text: "comprar",
+            value: "catch",
+            }
+        },
+        })
+        .then((value) => {
+        $.get("../carta/"+id+'/comprar', function(data, status){
+            location.reload();
+        });
+    });
+}
+
+</script>
 <script>
     $('#selectMultiple').multiSelect()
 </script>

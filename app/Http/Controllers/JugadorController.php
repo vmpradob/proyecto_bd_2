@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 
 use App\Jugador;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Carta;
 
 class JugadorController extends Controller
 {
@@ -127,5 +129,16 @@ class JugadorController extends Controller
     public function cartas(Jugador $jugador){
         $cartas = $jugador->cartas()->paginate(12);
         return view('user.cartas', compact('cartas'));
+    }
+    public function comprar($carta)
+    {
+        $carta =Carta::where('id',$carta)->first();
+        $jugador = Jugador::where('id_usuario', Auth::user()->id)->first();
+        if($jugador->dinero >= $carta->precio_c()){
+            $jugador->dinero = $jugador->dinero - $carta->precio_c();
+            $jugador->cartas()->attach($carta->id);
+            $jugador->save();
+            return 'true';
+        }
     }
 }
