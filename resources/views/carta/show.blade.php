@@ -10,10 +10,10 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-4">
                 <img src="../uploads/imgUrl/{{$cartum->imgUrl}}" style="position: absolute; margin-top:20px; margin-left: 35px">
-                <img src="../uploads/imgUrl/Retador.png" style="position: absolute; ">
-                <img src="../uploads/imgUrl/shurima.png" style="position: absolute; ">
-                <img src="../uploads/imgUrl/Tanque.png" style="position: absolute; ">
-                <p style="position: absolute;color: white;font-size: 16px;margin-top: 440px;margin-left: 75px">{{$cartum->nombre}}</p>
+                @foreach($cartum->clases as $clase)
+                    <img src="../uploads/imgUrl/{{$clase->imgUrl}}" style="position: absolute; ">
+                @endforeach
+                <p style="position: absolute;color: white;font-size: 16px;margin-top: 475px;left:10%;">{{$cartum->nombre}}</p>
             </div>
         </div>
     </div>

@@ -42,7 +42,7 @@
                                 @foreach($clase as $item)
                                     <tr>
                                         <td>{{ $loop->iteration or $item->id }}</td>
-                                        <td>{{ $item->nombre }}</td><td>{{ $item->precio_c }}</td><td>{{ $item->precio_v }}</td><td>{{ $item->probabilidad*100 }}%</td>
+                                        <td>{{ $item->nombre }}</td><td>@if($item->precio_c == 0) - @else {{ $item->precio_c }} @endif</td><td>@if($item->precio_c == 0) - @else {{ $item->precio_c }} @endif</td><td>@if($item->probabilidad == 1) - @else {{ $item->probabilidad*100 }}% @endif</td>
                                         <td>
                                             <a href="{{ url('/clase/' . $item->id) }}" title="View Clase"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/clase/' . $item->id . '/edit') }}" title="Edit Clase"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
