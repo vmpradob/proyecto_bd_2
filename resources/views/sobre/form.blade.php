@@ -27,7 +27,7 @@
 <div class="form-group {{ $errors->has('imgUrl') ? 'has-error' : ''}}">
     <label for="clase" class="col-md-2 control-label">{{ 'Clase' }}</label>
     <div class="col-md-10">
-        <select name="clase" class="form-control" id="">
+        <select name="id_clase" class="form-control" id="">
             @foreach(App\Clase::all() as $clase)
                 @if(isset($sobre))
                     <option @if($sobre->clase = $clase) selected  @endif value="{{$clase->id}}">{{$clase->nombre}}</option>
