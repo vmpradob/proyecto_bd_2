@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-4">
                 <img src="../uploads/imgUrl/{{$cartum->imgUrl}}" style="position: absolute; margin-top:20px; margin-left: 35px">
-                @foreach($cartum->clases as $clase)
+                @foreach($cartum->clases()->orderBy('precio_c','desc')->get() as $clase)
                     <img src="../uploads/imgUrl/{{$clase->imgUrl}}" style="position: absolute; ">
                 @endforeach
                 <p style="position: absolute;color: white;font-size: 16px;margin-top: 475px;left:10%;">{{$cartum->nombre}}</p>

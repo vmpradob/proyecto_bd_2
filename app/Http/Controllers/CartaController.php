@@ -51,7 +51,7 @@ class CartaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'nombre' => 'required|max:20'
+			'nombre' => 'required'
 		]);
         $requestData = $request->all();
         
@@ -113,7 +113,7 @@ class CartaController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-			'nombre' => 'required|max:20'
+			'nombre' => 'required'
 		]);
         $requestData = $request->all();
         
