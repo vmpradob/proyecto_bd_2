@@ -2,6 +2,7 @@
 
 @section('content_header')
     <h1>Comprar Cartas</h1>
+    {!! $cartas->appends(['search' => Request::get('search')])->render() !!}
 @stop
 
 @section('content')

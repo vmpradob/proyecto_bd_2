@@ -10,7 +10,7 @@ class TiendaController extends Controller
 {
     public function cartas()
     {
-        $cartas = Carta::all();
+        $cartas = Carta::paginate(12);
         return view('tienda.cartas',compact('cartas'));
     }
 }
