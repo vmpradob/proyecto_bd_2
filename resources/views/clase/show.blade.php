@@ -9,7 +9,7 @@
     <div class="container-full-fluid">
         <div class="row">
 
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-3 col-md-offset-3">
                 <div class="box">
                 <div class="box-header with-border">
                     <div class="box-title">Clase</div>
@@ -23,21 +23,19 @@
                         </form>
                     </div>
                 </div>
-
                     <div class="box-body">
                         <div class="table-responsive">
                             <table class="table table-hover">
-                                <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $clase->id }}</td>
-                                    </tr>
-                                    <tr><th> Nombre </th><td> {{ $clase->nombre }} </td></tr><tr><th> Precio C </th><td> {{ $clase->precio_c }} </td></tr><tr><th> Precio V </th><td> {{ $clase->precio_v }} </td></tr><tr><th> Probabilidad </th><td> {{ $clase->probabilidad }} </td></tr><tr><th> ImgUrl </th><td> {{ $clase->imgUrl }} </td></tr>
+                                <tbody>                                   
+                                    <tr><th> Nombre </th><td> {{ $clase->nombre }} </td></tr><tr><th> Precio Compra </th><td> {{ $clase->precio_c }} </td></tr><tr><th> Precio Venta </th><td> {{ $clase->precio_v }} </td></tr><tr><th> Probabilidad </th><td> {{ $clase->probabilidad }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4"><img src="../uploads/imgUrl/{{$clase->imgUrl}}" style="position:absolute" height="250px" alt=""></div>
+
         </div>
     </div>
 @endsection
