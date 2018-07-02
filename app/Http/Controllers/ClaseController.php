@@ -18,7 +18,7 @@ class ClaseController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 25;
+        $perPage = 10;
 
         if (!empty($keyword)) {
             $clase = Clase::where('nombre', 'LIKE', "%$keyword%")
