@@ -58,7 +58,7 @@
 
                     <ul class="nav navbar-nav">
                         @if(Auth::user()->role == 'J')
-                            <li><a href="#">{{Auth::user()->jugador->dinero}}</a></li>
+                            <li><a href="#">{{Auth::user()->jugador->dinero}} <i class="fa fa-money"></i></a></li>
                         @endif
                         <li>
                             @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
