@@ -29,7 +29,7 @@ class Sobre extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre', 'precio', 'cant_cartas', 'imgUrl'];
+    protected $fillable = ['nombre', 'precio', 'cant_cartas', 'imgUrl','id_clase'];
 
     public function clases()
     {
