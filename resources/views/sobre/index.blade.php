@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="box">
@@ -35,14 +35,14 @@
                             <table class="table table-hover" style="margin-bottom: 0px">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Nombre</th><th>Precio</th><th>Cant Cartas</th><th>ImgUrl</th><th>Actions</th>
+                                        <th>#</th><th>Nombre</th><th>Precio</th><th>Cant Cartas</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($sobre as $item)
                                     <tr>
                                         <td>{{ $loop->iteration or $item->id }}</td>
-                                        <td>{{ $item->nombre }}</td><td>{{ $item->precio }}</td><td>{{ $item->cant_cartas }}</td><td>{{ $item->imgUrl }}</td>
+                                        <td>{{ $item->nombre }}</td><td>{{ $item->precio }}</td><td>{{ $item->cant_cartas }}</td>
                                         <td>
                                             <a href="{{ url('/sobre/' . $item->id) }}" title="View Sobre"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/sobre/' . $item->id . '/edit') }}" title="Edit Sobre"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

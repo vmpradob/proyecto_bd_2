@@ -9,7 +9,7 @@
     <div class="container-full-fluid">
         <div class="row">
 
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-3 col-md-offset-3">
                 <div class="box">
                 <div class="box-header with-border">
                     <div class="box-title">Sobre</div>
@@ -27,17 +27,15 @@
                     <div class="box-body">
                         <div class="table-responsive">
                             <table class="table table-hover">
-                                <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $sobre->id }}</td>
-                                    </tr>
-                                    <tr><th> Nombre </th><td> {{ $sobre->nombre }} </td></tr><tr><th> Precio </th><td> {{ $sobre->precio }} </td></tr><tr><th> Cant Cartas </th><td> {{ $sobre->cant_cartas }} </td></tr><tr><th> ImgUrl </th><td> {{ $sobre->imgUrl }} </td></tr>
+                                <tbody>       
+                                    <tr><th> Nombre </th><td> {{ $sobre->nombre }} </td></tr><tr><th> Precio </th><td> {{ $sobre->precio }} </td></tr><tr><th> Cant Cartas </th><td> {{ $sobre->cant_cartas }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4"><img src="../uploads/imgUrl/{{$sobre->imgUrl}}" style="position:absolute" height="230px" alt=""></div>
         </div>
     </div>
 @endsection
