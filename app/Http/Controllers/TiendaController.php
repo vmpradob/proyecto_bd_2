@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Carta;
+use App\Sobre;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,5 +13,10 @@ class TiendaController extends Controller
     {
         $cartas = Carta::paginate(12);
         return view('tienda.cartas',compact('cartas'));
+    }
+    public function sobres()
+    {
+        $sobres = Sobre::paginate(12);
+        return view('tienda.sobres',compact('sobres'));
     }
 }
