@@ -36,6 +36,6 @@ class User extends Authenticatable
 
     public function jugador()
     {
-        return $this->hasOne('App\Jugador','id_usuario');
+        return $this->hasOne('App\Jugador','id_usuario','id');
     }
 }

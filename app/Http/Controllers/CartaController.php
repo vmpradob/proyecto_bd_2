@@ -139,14 +139,17 @@ class CartaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Exception
      */
     public function destroy($id)
     {
+        $carta= Carta::find($id);
+        /** @var Carta $carta */
+        $carta->clases()->sync([]);
         Carta::destroy($id);
-
         return redirect('carta')->with('flash_message', 'Carta deleted!');
     }
 }

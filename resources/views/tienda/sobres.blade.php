@@ -20,7 +20,7 @@
                     </div>
                     <div class="box-footer">
                         <div class="row">
-                            <div class="col-sm-4 border-right">
+                            <div class="@if(Auth::user()->jugador->dinero >= $sobre->precio) col-sm-4 @else col-sm-6 @endif border-right">
                                 <div class="description-block">
                                     <h5 class="description-header">{{$sobre->precio}}</h5>
                                     <span class="description-text">precio</span>
@@ -28,13 +28,16 @@
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
-                            <div class="col-sm-4 border-right">
-                                <div class="description-block">
-                                    <h5 class="description-header"><a href="user/comprar/sobre" class="btn btn-primary">Comprar</a></h5>
+                            @if(Auth::user()->jugador->dinero >= $sobre->precio)
+                                <div class="col-sm-4 border-right">
+                                    <div class="description-block">
+                                        <h5 class="description-header"><a href="../comprar/sobre/{{ $sobre->id }}" class="btn btn-primary">Comprar</a></h5>
+                                    </div>
+                                    <!-- /.description-block -->
                                 </div>
-                                <!-- /.description-block -->
-                            </div>
-                            <div class="col-sm-4 border-right">
+                            @endif
+
+                            <div class="@if(Auth::user()->jugador->dinero >= $sobre->precio) col-sm-4 @else col-sm-6 @endif border-right">
                                 <div class="description-block">
                                     <h5 class="description-header">{{$sobre->cant_cartas}}</h5>
                                     <span class="description-text">Cartas</span>

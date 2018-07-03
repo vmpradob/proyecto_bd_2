@@ -39,10 +39,6 @@ class AppServiceProvider extends ServiceProvider
                     'url' => 'tienda/carta',
                 ]);
                 $event->menu->add([
-                    'text' => 'Adquirir monedas',
-                    'url' => 'tienda/dinero',
-                ]);
-                $event->menu->add([
                    'text' => 'Ventas de usuario',
                    'url' => 'tienda/usuarios'
                 ]);

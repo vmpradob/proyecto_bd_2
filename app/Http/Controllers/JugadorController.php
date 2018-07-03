@@ -163,6 +163,7 @@ class JugadorController extends Controller
         $jugador = Auth::user()->jugador;
         $jugador->dinero += $request->get('dinero');
         $jugador->save();
-        return view('user.cartas');
+        $cartas = $jugador->cartas()->paginate(12);
+        return view('user.cartas',compact('cartas'));
     }
 }

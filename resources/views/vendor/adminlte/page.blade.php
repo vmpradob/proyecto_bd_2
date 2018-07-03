@@ -3,6 +3,9 @@
 @section('adminlte_css')
     <link rel="stylesheet"
           href="{{ asset('vendor/adminlte/dist/css/skins/skin-' . config('adminlte.skin', 'blue') . '.min.css')}} ">
+    <style>
+
+    </style>
     @stack('css')
     @yield('css')
 @stop
@@ -93,19 +96,24 @@
 
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
-
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">Asignar dinero</li>
+                </ul>
+                @if(Auth::user()->role == 'J')
+                <form action="/proyecto_bd_2/public/user/recargar" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="numeric" style="" name="dinero" class="form-control" placeholder="Sumar dinero">
+                        <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-arrow-right"></i>
+                </button>
+              </span>
+                    </div>
+                </form>
+                @endif
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
                     @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
                     <li>
-                        <form action="/proyecto_bd_2/public/user/recargar" method="get">
-                            <div class="input-group input-group-sm">
-                                <input type="numeric" class="form-control" name="dinero" placeholder="asignar dinero">
-                                <span class="input-group-btn">
-                                  <button type="submit" class="btn btn-primary btn-flat">Go!</button>
-                                </span>
-                            </div>
-                        </form>
                     </li>
                 </ul>
                 <!-- /.sidebar-menu -->

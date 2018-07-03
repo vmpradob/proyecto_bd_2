@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @property mixed $clases
  * @property mixed $compras
+ * @property mixed precio
  */
 class Sobre extends Model
 {
@@ -39,7 +42,11 @@ class Sobre extends Model
     {
         return $this->hasMany('App\Compra','id_sobre','id');
     }
-    
+
+    public function jugadores()
+    {
+        return $this->belongsToMany('App\Jugador','jugador_compra_sobre','id_sobre','id_jugador')->withPivot('cantdidad');
+    }
 
     public function setUpdatedAt($value)
     {
@@ -51,4 +58,22 @@ class Sobre extends Model
     {
         return NULL;
     }
+
+    public function cartas(){
+        for($i=0; $i<$this->cant_cartas;$i++)
+            $rawResult[$i] =DB::select(DB::raw('call carta_random()'));
+        $objects = [];
+
+        foreach($rawResult as $result)
+        {
+            $object = new Carta();
+
+            $object->setRawAttributes((array)$result[0], true);
+
+            $objects[] = $object;
+        }
+
+        return new Collection($objects);
+    }
 }
+{}
