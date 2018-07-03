@@ -8,25 +8,45 @@
 @section('content')
     <div class="container-full-fluid">
         <div class="row">
-        @php
-        $count = 0;
-        $count2 =0;
-        @endphp
          @foreach($sobres as $sobre)
-            <div class="col-md-2">            
-            <img src="../uploads/imgUrl/{{$sobre->imgUrl}}" height="250" style="position: absolute; margin-top:{{($count2*320)+6}}px; margin-left: 15px">
-                <p style="position: absolute;color: black;font-size: 12px;margin-top: {{($count2*320)+250}}px;left:50%;">Precio: {{$sobre->precio}}</p>
-                <p style="position: absolute;color: black;font-size: 12px;margin-top: {{($count2*320)+270}}px;left:50%;">{{$sobre->nombre}}</p>
-            </a>       
-
+            <div class="col-md-3">
+                <div class="box box-widget widget-user">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header bg-primary">
+                        <h3 class="widget-user-username text-center">{{$sobre->nombre}}</h3>
+                    </div>
+                    <div class="widget-user-image">
+                        <img class="img-circle" style="background-color: white" src="../uploads/imgUrl/{{$sobre->imgUrl}}" alt="User Avatar">
+                    </div>
+                    <div class="box-footer">
+                        <div class="row">
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header">{{$sobre->precio}}</h5>
+                                    <span class="description-text">precio</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header"><a href="user/comprar/sobre" class="btn btn-primary">Comprar</a></h5>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header">{{$sobre->cant_cartas}}</h5>
+                                    <span class="description-text">Cartas</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
             </div>
-            @php
-            $count++; 
-            if($count == 6){ 
-                $count = 0; 
-                $count2++;
-            };
-            @endphp
         @endforeach
         </div>
     </div>

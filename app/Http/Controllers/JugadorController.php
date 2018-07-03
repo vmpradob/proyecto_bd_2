@@ -109,7 +109,7 @@ class JugadorController extends Controller
         $jugador = Jugador::findOrFail($id);
         $jugador->update($requestData);
 
-        return redirect('jugador')->with('flash_message', 'Jugador updated!');
+        return view('home');
     }
 
     /**
@@ -158,5 +158,11 @@ class JugadorController extends Controller
         }
         $jugador->save();
         return 'true';
+    }
+    public function cargarDinero(Request $request){
+        $jugador = Auth::user()->jugador;
+        $jugador->dinero += $request->get('dinero');
+        $jugador->save();
+        return view('user.cartas');
     }
 }

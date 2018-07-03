@@ -97,6 +97,16 @@
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
                     @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
+                    <li>
+                        <form action="/proyecto_bd_2/public/user/recargar" method="get">
+                            <div class="input-group input-group-sm">
+                                <input type="numeric" class="form-control" name="dinero" placeholder="asignar dinero">
+                                <span class="input-group-btn">
+                                  <button type="submit" class="btn btn-primary btn-flat">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>

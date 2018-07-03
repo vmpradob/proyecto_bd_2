@@ -55,7 +55,7 @@ class SobreController extends Controller
         $this->validate($request, [
 			'nombre' => 'required|max:20',
 			'precio' => 'required|numeric',
-			'cant_carta' => 'required|numeric'
+			'cant_cartas' => 'required|numeric'
 		]);
         $requestData = $request->all();
         
@@ -115,16 +115,15 @@ class SobreController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $sobre = Sobre::findOrFail($id);
         $this->validate($request, [
 			'nombre' => 'required|max:20',
 			'precio' => 'required|numeric',
-			'cant_carta' => 'required|numeric'
+			'cant_cartas' => 'required|numeric'
 		]);
         $requestData = $request->all();
-        
 
         if ($request->hasFile('imgUrl')) {
-
             $file = $request->file('imgUrl');
                 $uploadPath = public_path('/uploads/imgUrl');
 
@@ -135,7 +134,6 @@ class SobreController extends Controller
                 $requestData['imgUrl'] = $fileName;
         }
 
-        $sobre = Sobre::findOrFail($id);
         $sobre->update($requestData);
 
         return redirect('sobre')->with('flash_message', 'Sobre updated!');

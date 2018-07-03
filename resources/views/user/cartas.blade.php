@@ -1,8 +1,7 @@
 @extends('adminlte::page')
 
 @section('content_header')
-    <h1>Comprar Cartas</h1>
-    {!! $cartas->appends(['search' => Request::get('search')])->render() !!}
+    <h1>Comprar Cartas <span style="font-size: 12px">    {!! $cartas->appends(['search' => Request::get('search')])->render() !!}</span></h1>
 @stop
 
 @section('content')

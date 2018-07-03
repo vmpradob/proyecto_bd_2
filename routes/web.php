@@ -29,3 +29,4 @@ Route::get('user/{jugador}/coleccion','JugadorController@cartas');
 Route::get('carta/{id}/comprar','JugadorController@comprar');
 Route::get('carta/{id}/vender','JugadorController@vender');
 Route::get('tienda/sobre','TiendaController@sobres');
+Route::get('user/recargar','JugadorController@cargarDinero');

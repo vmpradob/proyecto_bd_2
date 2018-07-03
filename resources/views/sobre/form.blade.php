@@ -13,7 +13,7 @@
 </div><div class="form-group {{ $errors->has('cant_cartas') ? 'has-error' : ''}}">
     <label for="cant_cartas" class="col-md-2 control-label">{{ 'Cant Cartas' }}</label>
     <div class="col-md-10">
-        <input class="form-control" name="cant_carta" type="number" id="cant_cartas" value="{{ $sobre->cant_cartas or ''}}" >
+        <input class="form-control" name="cant_cartas" type="number" id="cant_cartas" value="{{ $sobre->cant_cartas or ''}}" >
         {!! $errors->first('cant_cartas', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
